@@ -1,2 +1,4 @@
 *.zarr
 *.zip
+models
+data

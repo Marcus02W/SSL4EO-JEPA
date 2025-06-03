@@ -1,0 +1,8 @@
+- validation loss during training
+- log lr schedule
+
+- train based on pretrained model
+
+- evaluation (comparison of linear probing with pretrained vs random init, linear probing vs finetuning)
+(comparisons for both jepa from scratch and imagenet pretrained jepa)
+-> dataset for evaluation https://github.com/phelber/EuroSAT?tab=readme-ov-file
