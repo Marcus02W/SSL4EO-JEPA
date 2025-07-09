@@ -1,0 +1,1755 @@
+5.4s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+5.4s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+5.4s 3 0.00s - to python to disable frozen modules.
+5.4s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+6.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.1s 7 0.00s - to python to disable frozen modules.
+6.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.4s 9 Collecting zarr
+10.4s 10 Downloading zarr-3.0.8-py3-none-any.whl.metadata (10.0 kB)
+10.5s 11 Collecting donfig>=0.8 (from zarr)
+10.5s 12 Downloading donfig-0.8.1.post1-py3-none-any.whl.metadata (5.0 kB)
+10.6s 13 Collecting numcodecs>=0.14 (from numcodecs[crc32c]>=0.14->zarr)
+10.6s 14 Downloading numcodecs-0.16.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.3 kB)
+10.6s 15 Requirement already satisfied: numpy>=1.25 in /usr/local/lib/python3.11/dist-packages (from zarr) (1.26.4)
+10.6s 16 Requirement already satisfied: packaging>=22.0 in /usr/local/lib/python3.11/dist-packages (from zarr) (25.0)
+10.6s 17 Requirement already satisfied: typing-extensions>=4.9 in /usr/local/lib/python3.11/dist-packages (from zarr) (4.13.2)
+10.7s 18 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/dist-packages (from donfig>=0.8->zarr) (6.0.2)
+10.9s 19 Collecting crc32c>=2.7 (from numcodecs[crc32c]>=0.14->zarr)
+10.9s 20 Downloading crc32c-2.7.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+10.9s 21 Requirement already satisfied: mkl_fft in /usr/local/lib/python3.11/dist-packages (from numpy>=1.25->zarr) (1.3.8)
+10.9s 22 Requirement already satisfied: mkl_random in /usr/local/lib/python3.11/dist-packages (from numpy>=1.25->zarr) (1.2.4)
+10.9s 23 Requirement already satisfied: mkl_umath in /usr/local/lib/python3.11/dist-packages (from numpy>=1.25->zarr) (0.1.1)
+10.9s 24 Requirement already satisfied: mkl in /usr/local/lib/python3.11/dist-packages (from numpy>=1.25->zarr) (2025.1.0)
+10.9s 25 Requirement already satisfied: tbb4py in /usr/local/lib/python3.11/dist-packages (from numpy>=1.25->zarr) (2022.1.0)
+10.9s 26 Requirement already satisfied: mkl-service in /usr/local/lib/python3.11/dist-packages (from numpy>=1.25->zarr) (2.4.1)
+10.9s 27 Requirement already satisfied: intel-openmp<2026,>=2024 in /usr/local/lib/python3.11/dist-packages (from mkl->numpy>=1.25->zarr) (2024.2.0)
+10.9s 28 Requirement already satisfied: tbb==2022.* in /usr/local/lib/python3.11/dist-packages (from mkl->numpy>=1.25->zarr) (2022.1.0)
+10.9s 29 Requirement already satisfied: tcmlib==1.* in /usr/local/lib/python3.11/dist-packages (from tbb==2022.*->mkl->numpy>=1.25->zarr) (1.3.0)
+10.9s 30 Requirement already satisfied: intel-cmplr-lib-rt in /usr/local/lib/python3.11/dist-packages (from mkl_umath->numpy>=1.25->zarr) (2024.2.0)
+10.9s 31 Requirement already satisfied: intel-cmplr-lib-ur==2024.2.0 in /usr/local/lib/python3.11/dist-packages (from intel-openmp<2026,>=2024->mkl->numpy>=1.25->zarr) (2024.2.0)
+11.0s 32 Downloading zarr-3.0.8-py3-none-any.whl (205 kB)
+11.0s 33 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/205.4 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m205.4/205.4 kB[0m [31m6.1 MB/s[0m eta [36m0:00:00[0m
+11.0s 34 [?25hDownloading donfig-0.8.1.post1-py3-none-any.whl (21 kB)
+11.0s 35 Downloading numcodecs-0.16.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.8 MB)
+11.1s 36 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/8.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━[0m [32m4.0/8.8 MB[0m [31m119.4 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m8.8/8.8 MB[0m [31m160.0 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8.8/8.8 MB[0m [31m93.1 MB/s[0m eta [36m0:00:00[0m
+11.1s 37 [?25hDownloading crc32c-2.7.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (53 kB)
+11.2s 38 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/53.7 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53.7/53.7 kB[0m [31m3.3 MB/s[0m eta [36m0:00:00[0m
+12.8s 39 [?25hInstalling collected packages: donfig, crc32c, numcodecs, zarr
+13.2s 40 Successfully installed crc32c-2.7.1 donfig-0.8.1.post1 numcodecs-0.16.1 zarr-3.0.8
+21.2s 41 Collecting rasterio
+21.2s 42 Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.1 kB)
+21.3s 43 Collecting affine (from rasterio)
+21.3s 44 Downloading affine-2.4.0-py3-none-any.whl.metadata (4.0 kB)
+21.3s 45 Requirement already satisfied: attrs in /usr/local/lib/python3.11/dist-packages (from rasterio) (25.3.0)
+21.3s 46 Requirement already satisfied: certifi in /usr/local/lib/python3.11/dist-packages (from rasterio) (2025.4.26)
+21.3s 47 Requirement already satisfied: click>=4.0 in /usr/local/lib/python3.11/dist-packages (from rasterio) (8.1.8)
+21.3s 48 Requirement already satisfied: cligj>=0.5 in /usr/local/lib/python3.11/dist-packages (from rasterio) (0.7.2)
+21.3s 49 Requirement already satisfied: numpy>=1.24 in /usr/local/lib/python3.11/dist-packages (from rasterio) (1.26.4)
+21.3s 50 Requirement already satisfied: click-plugins in /usr/local/lib/python3.11/dist-packages (from rasterio) (1.1.1)
+21.3s 51 Requirement already satisfied: pyparsing in /usr/local/lib/python3.11/dist-packages (from rasterio) (3.0.9)
+21.3s 52 Requirement already satisfied: mkl_fft in /usr/local/lib/python3.11/dist-packages (from numpy>=1.24->rasterio) (1.3.8)
+21.3s 53 Requirement already satisfied: mkl_random in /usr/local/lib/python3.11/dist-packages (from numpy>=1.24->rasterio) (1.2.4)
+21.3s 54 Requirement already satisfied: mkl_umath in /usr/local/lib/python3.11/dist-packages (from numpy>=1.24->rasterio) (0.1.1)
+21.3s 55 Requirement already satisfied: mkl in /usr/local/lib/python3.11/dist-packages (from numpy>=1.24->rasterio) (2025.1.0)
+21.3s 56 Requirement already satisfied: tbb4py in /usr/local/lib/python3.11/dist-packages (from numpy>=1.24->rasterio) (2022.1.0)
+21.3s 57 Requirement already satisfied: mkl-service in /usr/local/lib/python3.11/dist-packages (from numpy>=1.24->rasterio) (2.4.1)
+21.3s 58 Requirement already satisfied: intel-openmp<2026,>=2024 in /usr/local/lib/python3.11/dist-packages (from mkl->numpy>=1.24->rasterio) (2024.2.0)
+21.3s 59 Requirement already satisfied: tbb==2022.* in /usr/local/lib/python3.11/dist-packages (from mkl->numpy>=1.24->rasterio) (2022.1.0)
+21.3s 60 Requirement already satisfied: tcmlib==1.* in /usr/local/lib/python3.11/dist-packages (from tbb==2022.*->mkl->numpy>=1.24->rasterio) (1.3.0)
+21.3s 61 Requirement already satisfied: intel-cmplr-lib-rt in /usr/local/lib/python3.11/dist-packages (from mkl_umath->numpy>=1.24->rasterio) (2024.2.0)
+21.4s 62 Requirement already satisfied: intel-cmplr-lib-ur==2024.2.0 in /usr/local/lib/python3.11/dist-packages (from intel-openmp<2026,>=2024->mkl->numpy>=1.24->rasterio) (2024.2.0)
+21.4s 63 Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (22.2 MB)
+21.6s 64 [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/22.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/22.2 MB[0m [31m38.9 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.1/22.2 MB[0m [31m104.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━[0m [32m14.7/22.2 MB[0m [31m205.9 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m22.2/22.2 MB[0m [31m228.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m22.2/22.2 MB[0m [31m228.2 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m22.2/22.2 MB[0m [31m88.2 MB/s[0m eta [36m0:00:00[0m
+21.6s 65 [?25hDownloading affine-2.4.0-py3-none-any.whl (15 kB)
+23.2s 66 Installing collected packages: affine, rasterio
+23.7s 67 Successfully installed affine-2.4.0 rasterio-1.4.3
+36.9s 68 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+36.9s 69 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+36.9s 70 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+36.9s 71 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+44.8s 72 Current Train Loss: 2.3979
+47.5s 73 Current Train Loss: 2.3705
+50.1s 74 Current Train Loss: 2.2632
+52.6s 75 Current Train Loss: 2.1697
+55.2s 76 Current Train Loss: 2.1320
+57.9s 77 Current Train Loss: 2.0999
+60.4s 78 Current Train Loss: 2.0805
+62.9s 79 Current Train Loss: 2.0204
+65.3s 80 Current Train Loss: 2.0635
+67.9s 81 Current Train Loss: 2.0153
+70.5s 82 Current Train Loss: 1.9556
+73.0s 83 Current Train Loss: 2.0088
+75.5s 84 Current Train Loss: 1.9766
+78.1s 85 Current Train Loss: 1.8162
+80.6s 86 Current Train Loss: 1.8445
+83.1s 87 Current Train Loss: 1.8360
+85.7s 88 Current Train Loss: 1.8074
+88.2s 89 Current Train Loss: 1.9439
+90.9s 90 Current Train Loss: 1.9079
+93.4s 91 Current Train Loss: 1.8638
+95.8s 92 Current Train Loss: 1.8414
+98.3s 93 Current Train Loss: 1.8735
+100.6s 94 Current Train Loss: 1.7930
+103.3s 95 Current Train Loss: 1.8750
+105.8s 96 Current Train Loss: 1.8771
+108.3s 97 Current Train Loss: 1.8391
+110.8s 98 Current Train Loss: 1.8041
+113.3s 99 Current Train Loss: 1.8308
+115.9s 100 Current Train Loss: 1.7919
+118.4s 101 Current Train Loss: 1.7921
+120.8s 102 Current Train Loss: 1.7943
+123.4s 103 Current Train Loss: 1.6954
+125.9s 104 Current Train Loss: 1.8989
+128.4s 105 Current Train Loss: 1.7386
+130.8s 106 Current Train Loss: 1.7773
+133.3s 107 Current Train Loss: 1.8176
+135.8s 108 Current Train Loss: 1.7522
+138.3s 109 Current Train Loss: 1.8843
+140.8s 110 Current Train Loss: 1.7483
+143.3s 111 Current Train Loss: 1.6940
+145.7s 112 Current Train Loss: 1.7054
+148.2s 113 Current Train Loss: 1.8021
+150.5s 114 Current Train Loss: 1.7707
+153.2s 115 Current Train Loss: 1.7553
+155.7s 116 Current Train Loss: 1.6843
+158.1s 117 Current Train Loss: 1.7724
+160.6s 118 Current Train Loss: 1.8457
+163.1s 119 Current Train Loss: 1.8303
+165.5s 120 Current Train Loss: 1.7655
+168.0s 121 Current Train Loss: 1.7231
+170.5s 122 Current Train Loss: 1.6839
+173.0s 123 Current Train Loss: 1.7694
+175.5s 124 Current Train Loss: 1.8264
+178.0s 125 Current Train Loss: 1.7773
+180.5s 126 Current Train Loss: 1.7042
+183.0s 127 Current Train Loss: 1.8174
+186.2s 128 Current Train Loss: 1.8242
+188.6s 129 Current Train Loss: 1.7351
+191.2s 130 Current Train Loss: 1.7529
+193.7s 131 Current Train Loss: 1.7422
+196.0s 132 Current Train Loss: 1.7563
+198.4s 133 Current Train Loss: 1.7870
+200.9s 134 Current Train Loss: 1.7932
+203.4s 135 Current Train Loss: 1.8051
+205.9s 136 Current Train Loss: 1.7679
+208.3s 137 Current Train Loss: 1.6741
+210.8s 138 Current Train Loss: 1.7889
+213.3s 139 Current Train Loss: 1.7123
+215.8s 140 Current Train Loss: 1.7585
+218.8s 141 Current Train Loss: 1.7001
+221.2s 142 Current Train Loss: 1.6342
+223.7s 143 Current Train Loss: 1.6396
+225.9s 144 Current Train Loss: 1.7751
+227.5s 145 Current Train Loss: 1.7823
+227.5s 146 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+227.5s 147 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+227.5s 148 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+227.5s 149 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+286.1s 150 Epoch [1/20] Train Loss: 1.8426 Val Loss: 1.7120 Val Acc: 40.74%
+286.2s 151 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+286.2s 152 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+286.2s 153 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+286.2s 154 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+289.5s 155 Current Train Loss: 1.6353
+291.9s 156 Current Train Loss: 1.7765
+294.0s 157 Current Train Loss: 1.7199
+296.2s 158 Current Train Loss: 1.7221
+298.4s 159 Current Train Loss: 1.8411
+300.6s 160 Current Train Loss: 1.6800
+302.8s 161 Current Train Loss: 1.7346
+305.1s 162 Current Train Loss: 1.6384
+307.3s 163 Current Train Loss: 1.6885
+309.4s 164 Current Train Loss: 1.7841
+311.6s 165 Current Train Loss: 1.6790
+313.9s 166 Current Train Loss: 1.6404
+316.2s 167 Current Train Loss: 1.6730
+318.5s 168 Current Train Loss: 1.6504
+320.6s 169 Current Train Loss: 1.7377
+322.7s 170 Current Train Loss: 1.7178
+325.0s 171 Current Train Loss: 1.6902
+327.3s 172 Current Train Loss: 1.6911
+329.7s 173 Current Train Loss: 1.6710
+332.0s 174 Current Train Loss: 1.7029
+334.1s 175 Current Train Loss: 1.7176
+336.4s 176 Current Train Loss: 1.8028
+338.5s 177 Current Train Loss: 1.6994
+340.8s 178 Current Train Loss: 1.7425
+343.1s 179 Current Train Loss: 1.6750
+345.4s 180 Current Train Loss: 1.6330
+347.6s 181 Current Train Loss: 1.6656
+349.8s 182 Current Train Loss: 1.6692
+352.2s 183 Current Train Loss: 1.5926
+354.5s 184 Current Train Loss: 1.6289
+356.8s 185 Current Train Loss: 1.6466
+358.9s 186 Current Train Loss: 1.6515
+361.0s 187 Current Train Loss: 1.6187
+363.1s 188 Current Train Loss: 1.6689
+365.3s 189 Current Train Loss: 1.6320
+367.5s 190 Current Train Loss: 1.7082
+369.7s 191 Current Train Loss: 1.6962
+371.9s 192 Current Train Loss: 1.7605
+374.2s 193 Current Train Loss: 1.6036
+377.0s 194 Current Train Loss: 1.7948
+379.4s 195 Current Train Loss: 1.6567
+381.6s 196 Current Train Loss: 1.6270
+383.7s 197 Current Train Loss: 1.7091
+386.0s 198 Current Train Loss: 1.7185
+388.3s 199 Current Train Loss: 1.6894
+390.5s 200 Current Train Loss: 1.6134
+392.9s 201 Current Train Loss: 1.7081
+395.3s 202 Current Train Loss: 1.8246
+397.7s 203 Current Train Loss: 1.6333
+399.8s 204 Current Train Loss: 1.6351
+402.1s 205 Current Train Loss: 1.7531
+404.2s 206 Current Train Loss: 1.6018
+406.5s 207 Current Train Loss: 1.6943
+408.8s 208 Current Train Loss: 1.6256
+411.1s 209 Current Train Loss: 1.6611
+413.3s 210 Current Train Loss: 1.6085
+415.6s 211 Current Train Loss: 1.6909
+417.8s 212 Current Train Loss: 1.6120
+419.9s 213 Current Train Loss: 1.5456
+422.3s 214 Current Train Loss: 1.6647
+424.6s 215 Current Train Loss: 1.6953
+426.9s 216 Current Train Loss: 1.6641
+429.0s 217 Current Train Loss: 1.7375
+431.1s 218 Current Train Loss: 1.6658
+433.2s 219 Current Train Loss: 1.6414
+435.5s 220 Current Train Loss: 1.6714
+437.8s 221 Current Train Loss: 1.6975
+440.7s 222 Current Train Loss: 1.6738
+443.0s 223 Current Train Loss: 1.6748
+445.2s 224 Current Train Loss: 1.6131
+447.3s 225 Current Train Loss: 1.6223
+449.4s 226 Current Train Loss: 1.7090
+451.4s 227 Current Train Loss: 1.6703
+453.0s 228 Current Train Loss: 1.6027
+453.0s 229 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+453.0s 230 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+453.0s 231 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+453.0s 232 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+501.4s 233 Epoch [2/20] Train Loss: 1.6796 Val Loss: 1.6389 Val Acc: 44.28%
+501.5s 234 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+501.5s 235 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+501.5s 236 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+501.5s 237 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+505.2s 238 Current Train Loss: 1.6545
+507.4s 239 Current Train Loss: 1.6122
+509.7s 240 Current Train Loss: 1.7014
+512.0s 241 Current Train Loss: 1.6440
+514.2s 242 Current Train Loss: 1.6639
+516.5s 243 Current Train Loss: 1.5834
+518.8s 244 Current Train Loss: 1.6189
+521.0s 245 Current Train Loss: 1.5947
+523.2s 246 Current Train Loss: 1.5201
+525.3s 247 Current Train Loss: 1.6426
+527.5s 248 Current Train Loss: 1.7567
+529.8s 249 Current Train Loss: 1.6330
+532.1s 250 Current Train Loss: 1.5412
+534.4s 251 Current Train Loss: 1.6178
+536.7s 252 Current Train Loss: 1.6608
+539.0s 253 Current Train Loss: 1.4794
+541.3s 254 Current Train Loss: 1.6837
+543.5s 255 Current Train Loss: 1.6324
+545.8s 256 Current Train Loss: 1.7465
+548.1s 257 Current Train Loss: 1.6676
+550.2s 258 Current Train Loss: 1.6499
+552.4s 259 Current Train Loss: 1.7567
+554.6s 260 Current Train Loss: 1.6189
+556.9s 261 Current Train Loss: 1.6273
+559.1s 262 Current Train Loss: 1.6649
+561.2s 263 Current Train Loss: 1.6297
+563.5s 264 Current Train Loss: 1.7232
+565.6s 265 Current Train Loss: 1.6448
+567.9s 266 Current Train Loss: 1.7014
+570.1s 267 Current Train Loss: 1.5745
+572.5s 268 Current Train Loss: 1.6163
+574.8s 269 Current Train Loss: 1.6537
+577.1s 270 Current Train Loss: 1.6739
+579.4s 271 Current Train Loss: 1.6164
+581.5s 272 Current Train Loss: 1.6098
+583.8s 273 Current Train Loss: 1.5181
+586.1s 274 Current Train Loss: 1.6071
+588.2s 275 Current Train Loss: 1.5574
+590.4s 276 Current Train Loss: 1.5684
+592.6s 277 Current Train Loss: 1.7129
+594.9s 278 Current Train Loss: 1.6242
+597.3s 279 Current Train Loss: 1.5550
+599.6s 280 Current Train Loss: 1.5927
+601.8s 281 Current Train Loss: 1.5996
+603.9s 282 Current Train Loss: 1.6631
+606.3s 283 Current Train Loss: 1.5658
+608.6s 284 Current Train Loss: 1.5810
+610.9s 285 Current Train Loss: 1.6118
+613.2s 286 Current Train Loss: 1.5500
+615.5s 287 Current Train Loss: 1.5347
+617.7s 288 Current Train Loss: 1.5406
+619.9s 289 Current Train Loss: 1.6260
+622.3s 290 Current Train Loss: 1.6573
+624.4s 291 Current Train Loss: 1.6194
+626.8s 292 Current Train Loss: 1.5849
+629.1s 293 Current Train Loss: 1.5531
+631.5s 294 Current Train Loss: 1.5842
+633.8s 295 Current Train Loss: 1.7665
+636.1s 296 Current Train Loss: 1.6592
+638.4s 297 Current Train Loss: 1.6006
+640.8s 298 Current Train Loss: 1.5857
+643.0s 299 Current Train Loss: 1.6455
+645.2s 300 Current Train Loss: 1.7009
+647.5s 301 Current Train Loss: 1.6661
+649.8s 302 Current Train Loss: 1.6984
+652.2s 303 Current Train Loss: 1.6291
+654.3s 304 Current Train Loss: 1.7100
+656.5s 305 Current Train Loss: 1.5361
+658.7s 306 Current Train Loss: 1.6241
+660.9s 307 Current Train Loss: 1.5848
+663.0s 308 Current Train Loss: 1.5707
+665.1s 309 Current Train Loss: 1.6226
+667.2s 310 Current Train Loss: 1.6962
+668.8s 311 Current Train Loss: 1.5932
+668.8s 312 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+668.8s 313 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+668.8s 314 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+668.8s 315 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+716.1s 316 Epoch [3/20] Train Loss: 1.6259 Val Loss: 1.5971 Val Acc: 47.28%
+716.1s 317 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+716.1s 318 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+716.1s 319 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+716.1s 320 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+719.5s 321 Current Train Loss: 1.5988
+721.9s 322 Current Train Loss: 1.6362
+724.1s 323 Current Train Loss: 1.6055
+726.2s 324 Current Train Loss: 1.6112
+728.3s 325 Current Train Loss: 1.6315
+730.5s 326 Current Train Loss: 1.6022
+732.7s 327 Current Train Loss: 1.6092
+734.9s 328 Current Train Loss: 1.5222
+737.0s 329 Current Train Loss: 1.6507
+739.2s 330 Current Train Loss: 1.6200
+741.5s 331 Current Train Loss: 1.6270
+743.7s 332 Current Train Loss: 1.6908
+746.0s 333 Current Train Loss: 1.5034
+748.3s 334 Current Train Loss: 1.5597
+750.5s 335 Current Train Loss: 1.5556
+752.8s 336 Current Train Loss: 1.5620
+755.0s 337 Current Train Loss: 1.4931
+757.3s 338 Current Train Loss: 1.6104
+759.4s 339 Current Train Loss: 1.5050
+761.6s 340 Current Train Loss: 1.6788
+763.9s 341 Current Train Loss: 1.6578
+765.9s 342 Current Train Loss: 1.5511
+768.0s 343 Current Train Loss: 1.6674
+770.3s 344 Current Train Loss: 1.5343
+772.5s 345 Current Train Loss: 1.4957
+774.7s 346 Current Train Loss: 1.6181
+777.0s 347 Current Train Loss: 1.5890
+779.2s 348 Current Train Loss: 1.5688
+781.3s 349 Current Train Loss: 1.6130
+783.6s 350 Current Train Loss: 1.6220
+785.9s 351 Current Train Loss: 1.6426
+788.3s 352 Current Train Loss: 1.6150
+790.6s 353 Current Train Loss: 1.6432
+792.9s 354 Current Train Loss: 1.5899
+795.2s 355 Current Train Loss: 1.6292
+797.3s 356 Current Train Loss: 1.5579
+799.4s 357 Current Train Loss: 1.6162
+801.8s 358 Current Train Loss: 1.6059
+804.0s 359 Current Train Loss: 1.6001
+806.3s 360 Current Train Loss: 1.6343
+808.7s 361 Current Train Loss: 1.5667
+811.0s 362 Current Train Loss: 1.6005
+813.3s 363 Current Train Loss: 1.4324
+815.4s 364 Current Train Loss: 1.5201
+817.5s 365 Current Train Loss: 1.6122
+820.0s 366 Current Train Loss: 1.4868
+822.3s 367 Current Train Loss: 1.6015
+824.4s 368 Current Train Loss: 1.6284
+826.6s 369 Current Train Loss: 1.6285
+828.9s 370 Current Train Loss: 1.6060
+831.2s 371 Current Train Loss: 1.5564
+833.4s 372 Current Train Loss: 1.5674
+835.6s 373 Current Train Loss: 1.5875
+837.7s 374 Current Train Loss: 1.6031
+839.8s 375 Current Train Loss: 1.6342
+842.2s 376 Current Train Loss: 1.5993
+844.4s 377 Current Train Loss: 1.6303
+846.7s 378 Current Train Loss: 1.6212
+848.8s 379 Current Train Loss: 1.4783
+851.3s 380 Current Train Loss: 1.5751
+853.4s 381 Current Train Loss: 1.5739
+855.5s 382 Current Train Loss: 1.5349
+857.7s 383 Current Train Loss: 1.5478
+860.0s 384 Current Train Loss: 1.6689
+862.1s 385 Current Train Loss: 1.5550
+864.2s 386 Current Train Loss: 1.6028
+866.5s 387 Current Train Loss: 1.4823
+868.8s 388 Current Train Loss: 1.5013
+871.1s 389 Current Train Loss: 1.5736
+873.4s 390 Current Train Loss: 1.6564
+875.4s 391 Current Train Loss: 1.5977
+877.5s 392 Current Train Loss: 1.6146
+879.5s 393 Current Train Loss: 1.5740
+881.1s 394 Current Train Loss: 1.5653
+881.2s 395 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+881.2s 396 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+881.2s 397 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+881.2s 398 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+929.4s 399 Epoch [4/20] Train Loss: 1.5880 Val Loss: 1.5633 Val Acc: 46.50%
+929.4s 400 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+929.4s 401 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+929.4s 402 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+929.4s 403 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+933.1s 404 Current Train Loss: 1.6111
+935.3s 405 Current Train Loss: 1.5101
+937.4s 406 Current Train Loss: 1.5646
+939.6s 407 Current Train Loss: 1.5401
+942.0s 408 Current Train Loss: 1.5468
+944.1s 409 Current Train Loss: 1.5440
+947.0s 410 Current Train Loss: 1.7094
+949.3s 411 Current Train Loss: 1.5930
+951.4s 412 Current Train Loss: 1.6518
+953.6s 413 Current Train Loss: 1.5658
+955.8s 414 Current Train Loss: 1.5828
+958.1s 415 Current Train Loss: 1.6141
+960.3s 416 Current Train Loss: 1.5067
+962.6s 417 Current Train Loss: 1.5807
+964.9s 418 Current Train Loss: 1.3918
+967.2s 419 Current Train Loss: 1.5977
+969.5s 420 Current Train Loss: 1.5668
+971.8s 421 Current Train Loss: 1.5242
+973.9s 422 Current Train Loss: 1.5184
+976.0s 423 Current Train Loss: 1.5234
+978.6s 424 Current Train Loss: 1.4936
+980.7s 425 Current Train Loss: 1.5236
+982.9s 426 Current Train Loss: 1.6787
+985.0s 427 Current Train Loss: 1.5583
+987.2s 428 Current Train Loss: 1.5569
+989.3s 429 Current Train Loss: 1.6560
+991.5s 430 Current Train Loss: 1.6004
+993.7s 431 Current Train Loss: 1.5447
+995.8s 432 Current Train Loss: 1.5262
+998.0s 433 Current Train Loss: 1.5676
+1000.3s 434 Current Train Loss: 1.5459
+1002.5s 435 Current Train Loss: 1.5142
+1004.8s 436 Current Train Loss: 1.6969
+1006.9s 437 Current Train Loss: 1.5371
+1009.3s 438 Current Train Loss: 1.5490
+1011.5s 439 Current Train Loss: 1.5612
+1013.8s 440 Current Train Loss: 1.5434
+1016.0s 441 Current Train Loss: 1.5030
+1018.1s 442 Current Train Loss: 1.5538
+1020.4s 443 Current Train Loss: 1.5049
+1022.6s 444 Current Train Loss: 1.5078
+1024.7s 445 Current Train Loss: 1.5768
+1026.8s 446 Current Train Loss: 1.5713
+1028.9s 447 Current Train Loss: 1.5451
+1031.2s 448 Current Train Loss: 1.4640
+1033.5s 449 Current Train Loss: 1.4726
+1035.7s 450 Current Train Loss: 1.5142
+1038.0s 451 Current Train Loss: 1.4678
+1040.3s 452 Current Train Loss: 1.5411
+1042.6s 453 Current Train Loss: 1.5120
+1044.9s 454 Current Train Loss: 1.5636
+1047.0s 455 Current Train Loss: 1.4474
+1049.1s 456 Current Train Loss: 1.6221
+1051.4s 457 Current Train Loss: 1.5746
+1053.6s 458 Current Train Loss: 1.6164
+1055.7s 459 Current Train Loss: 1.5859
+1058.0s 460 Current Train Loss: 1.5456
+1060.3s 461 Current Train Loss: 1.6226
+1062.6s 462 Current Train Loss: 1.5690
+1064.9s 463 Current Train Loss: 1.6007
+1067.2s 464 Current Train Loss: 1.6387
+1069.4s 465 Current Train Loss: 1.5294
+1071.8s 466 Current Train Loss: 1.5593
+1074.1s 467 Current Train Loss: 1.5826
+1076.2s 468 Current Train Loss: 1.4845
+1078.3s 469 Current Train Loss: 1.5758
+1080.4s 470 Current Train Loss: 1.5370
+1082.6s 471 Current Train Loss: 1.6260
+1084.9s 472 Current Train Loss: 1.5039
+1087.1s 473 Current Train Loss: 1.5680
+1089.2s 474 Current Train Loss: 1.6355
+1091.3s 475 Current Train Loss: 1.6391
+1093.3s 476 Current Train Loss: 1.4736
+1094.9s 477 Current Train Loss: 1.5523
+1094.9s 478 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1094.9s 479 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1094.9s 480 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1094.9s 481 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1142.8s 482 Epoch [5/20] Train Loss: 1.5579 Val Loss: 1.5367 Val Acc: 48.17%
+1142.8s 483 Checkpoint saved at epoch 5 to /kaggle/working/linear_classifier_epoch_5.pth
+1142.9s 484 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1142.9s 485 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1142.9s 486 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1142.9s 487 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1146.4s 488 Current Train Loss: 1.5932
+1148.7s 489 Current Train Loss: 1.4982
+1150.8s 490 Current Train Loss: 1.6261
+1153.1s 491 Current Train Loss: 1.5138
+1155.3s 492 Current Train Loss: 1.5992
+1157.7s 493 Current Train Loss: 1.4873
+1159.9s 494 Current Train Loss: 1.5856
+1162.2s 495 Current Train Loss: 1.5594
+1164.3s 496 Current Train Loss: 1.5009
+1166.7s 497 Current Train Loss: 1.5472
+1168.8s 498 Current Train Loss: 1.5127
+1171.0s 499 Current Train Loss: 1.5222
+1173.3s 500 Current Train Loss: 1.5962
+1175.5s 501 Current Train Loss: 1.3904
+1177.6s 502 Current Train Loss: 1.4875
+1179.9s 503 Current Train Loss: 1.4623
+1182.2s 504 Current Train Loss: 1.5582
+1184.4s 505 Current Train Loss: 1.4608
+1186.6s 506 Current Train Loss: 1.5045
+1188.7s 507 Current Train Loss: 1.5284
+1190.9s 508 Current Train Loss: 1.5847
+1193.2s 509 Current Train Loss: 1.6246
+1195.4s 510 Current Train Loss: 1.5638
+1197.8s 511 Current Train Loss: 1.6252
+1200.0s 512 Current Train Loss: 1.5236
+1202.2s 513 Current Train Loss: 1.5736
+1204.3s 514 Current Train Loss: 1.5626
+1206.4s 515 Current Train Loss: 1.4434
+1208.7s 516 Current Train Loss: 1.5298
+1210.9s 517 Current Train Loss: 1.6075
+1213.1s 518 Current Train Loss: 1.4517
+1215.3s 519 Current Train Loss: 1.5590
+1217.4s 520 Current Train Loss: 1.5994
+1219.6s 521 Current Train Loss: 1.4794
+1221.8s 522 Current Train Loss: 1.5794
+1224.0s 523 Current Train Loss: 1.6451
+1226.2s 524 Current Train Loss: 1.5405
+1228.3s 525 Current Train Loss: 1.4597
+1231.3s 526 Current Train Loss: 1.5008
+1233.6s 527 Current Train Loss: 1.5485
+1235.8s 528 Current Train Loss: 1.5429
+1237.9s 529 Current Train Loss: 1.5725
+1240.1s 530 Current Train Loss: 1.5045
+1242.5s 531 Current Train Loss: 1.5435
+1244.5s 532 Current Train Loss: 1.6123
+1246.7s 533 Current Train Loss: 1.4724
+1249.0s 534 Current Train Loss: 1.4344
+1251.3s 535 Current Train Loss: 1.5028
+1253.5s 536 Current Train Loss: 1.4926
+1255.8s 537 Current Train Loss: 1.5397
+1258.0s 538 Current Train Loss: 1.5196
+1260.2s 539 Current Train Loss: 1.6095
+1263.1s 540 Current Train Loss: 1.5377
+1265.4s 541 Current Train Loss: 1.5462
+1267.8s 542 Current Train Loss: 1.6243
+1270.0s 543 Current Train Loss: 1.4698
+1272.2s 544 Current Train Loss: 1.5873
+1274.3s 545 Current Train Loss: 1.5207
+1276.4s 546 Current Train Loss: 1.4873
+1278.6s 547 Current Train Loss: 1.4687
+1280.7s 548 Current Train Loss: 1.5896
+1283.0s 549 Current Train Loss: 1.5989
+1285.3s 550 Current Train Loss: 1.5189
+1287.6s 551 Current Train Loss: 1.5141
+1289.7s 552 Current Train Loss: 1.5551
+1291.9s 553 Current Train Loss: 1.4793
+1294.2s 554 Current Train Loss: 1.4143
+1296.4s 555 Current Train Loss: 1.4969
+1298.6s 556 Current Train Loss: 1.4968
+1300.8s 557 Current Train Loss: 1.3594
+1302.9s 558 Current Train Loss: 1.5007
+1304.9s 559 Current Train Loss: 1.5557
+1307.0s 560 Current Train Loss: 1.4814
+1308.6s 561 Current Train Loss: 1.7178
+1308.6s 562 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1308.6s 563 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1308.6s 564 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1308.6s 565 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1355.8s 566 Epoch [6/20] Train Loss: 1.5325 Val Loss: 1.5107 Val Acc: 49.02%
+1355.9s 567 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1355.9s 568 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1355.9s 569 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1355.9s 570 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1359.5s 571 Current Train Loss: 1.6175
+1362.0s 572 Current Train Loss: 1.4789
+1364.3s 573 Current Train Loss: 1.5266
+1366.5s 574 Current Train Loss: 1.5659
+1368.6s 575 Current Train Loss: 1.6174
+1370.9s 576 Current Train Loss: 1.4657
+1373.2s 577 Current Train Loss: 1.5319
+1375.4s 578 Current Train Loss: 1.5236
+1377.7s 579 Current Train Loss: 1.4656
+1379.8s 580 Current Train Loss: 1.5518
+1382.0s 581 Current Train Loss: 1.5250
+1384.2s 582 Current Train Loss: 1.6094
+1386.6s 583 Current Train Loss: 1.5419
+1388.8s 584 Current Train Loss: 1.4900
+1390.9s 585 Current Train Loss: 1.4432
+1393.1s 586 Current Train Loss: 1.4690
+1395.4s 587 Current Train Loss: 1.4712
+1397.7s 588 Current Train Loss: 1.5329
+1399.9s 589 Current Train Loss: 1.5068
+1402.2s 590 Current Train Loss: 1.5718
+1404.4s 591 Current Train Loss: 1.5448
+1406.6s 592 Current Train Loss: 1.4519
+1408.9s 593 Current Train Loss: 1.4639
+1411.2s 594 Current Train Loss: 1.5560
+1413.4s 595 Current Train Loss: 1.5839
+1415.5s 596 Current Train Loss: 1.5470
+1417.8s 597 Current Train Loss: 1.5283
+1420.2s 598 Current Train Loss: 1.4968
+1422.5s 599 Current Train Loss: 1.4488
+1424.6s 600 Current Train Loss: 1.5130
+1426.8s 601 Current Train Loss: 1.4844
+1429.1s 602 Current Train Loss: 1.4445
+1431.3s 603 Current Train Loss: 1.5099
+1433.6s 604 Current Train Loss: 1.6162
+1435.8s 605 Current Train Loss: 1.5269
+1438.1s 606 Current Train Loss: 1.4867
+1440.2s 607 Current Train Loss: 1.4798
+1442.3s 608 Current Train Loss: 1.4741
+1444.6s 609 Current Train Loss: 1.5344
+1446.7s 610 Current Train Loss: 1.6103
+1449.0s 611 Current Train Loss: 1.7039
+1451.1s 612 Current Train Loss: 1.4542
+1453.4s 613 Current Train Loss: 1.5181
+1455.7s 614 Current Train Loss: 1.5195
+1457.8s 615 Current Train Loss: 1.4253
+1459.9s 616 Current Train Loss: 1.3877
+1462.1s 617 Current Train Loss: 1.5528
+1464.2s 618 Current Train Loss: 1.4479
+1466.4s 619 Current Train Loss: 1.5308
+1468.7s 620 Current Train Loss: 1.4589
+1470.9s 621 Current Train Loss: 1.5500
+1473.2s 622 Current Train Loss: 1.6048
+1475.5s 623 Current Train Loss: 1.3877
+1477.7s 624 Current Train Loss: 1.4284
+1479.9s 625 Current Train Loss: 1.5384
+1482.2s 626 Current Train Loss: 1.4367
+1485.1s 627 Current Train Loss: 1.4750
+1487.2s 628 Current Train Loss: 1.4543
+1489.3s 629 Current Train Loss: 1.5042
+1491.4s 630 Current Train Loss: 1.4939
+1493.5s 631 Current Train Loss: 1.5270
+1495.6s 632 Current Train Loss: 1.4648
+1497.7s 633 Current Train Loss: 1.5273
+1500.0s 634 Current Train Loss: 1.5171
+1502.4s 635 Current Train Loss: 1.5294
+1504.6s 636 Current Train Loss: 1.5292
+1506.9s 637 Current Train Loss: 1.4900
+1509.1s 638 Current Train Loss: 1.4374
+1511.4s 639 Current Train Loss: 1.5854
+1513.5s 640 Current Train Loss: 1.5002
+1515.7s 641 Current Train Loss: 1.4108
+1517.7s 642 Current Train Loss: 1.4640
+1519.8s 643 Current Train Loss: 1.4856
+1521.3s 644 Current Train Loss: 1.4051
+1521.4s 645 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1521.4s 646 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1521.4s 647 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1521.4s 648 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1568.7s 649 Epoch [7/20] Train Loss: 1.5075 Val Loss: 1.4884 Val Acc: 49.72%
+1568.8s 650 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1568.8s 651 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1568.8s 652 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1568.8s 653 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1572.3s 654 Current Train Loss: 1.5328
+1574.6s 655 Current Train Loss: 1.5881
+1576.7s 656 Current Train Loss: 1.5477
+1579.1s 657 Current Train Loss: 1.5749
+1581.4s 658 Current Train Loss: 1.4736
+1583.6s 659 Current Train Loss: 1.4857
+1585.9s 660 Current Train Loss: 1.5011
+1588.0s 661 Current Train Loss: 1.5800
+1590.1s 662 Current Train Loss: 1.4409
+1592.4s 663 Current Train Loss: 1.6023
+1594.7s 664 Current Train Loss: 1.4374
+1597.0s 665 Current Train Loss: 1.4772
+1599.1s 666 Current Train Loss: 1.4486
+1601.2s 667 Current Train Loss: 1.3668
+1603.3s 668 Current Train Loss: 1.4710
+1605.4s 669 Current Train Loss: 1.4185
+1607.6s 670 Current Train Loss: 1.5459
+1609.8s 671 Current Train Loss: 1.4160
+1612.1s 672 Current Train Loss: 1.4217
+1614.2s 673 Current Train Loss: 1.5337
+1616.3s 674 Current Train Loss: 1.4858
+1618.4s 675 Current Train Loss: 1.5168
+1620.7s 676 Current Train Loss: 1.5695
+1622.9s 677 Current Train Loss: 1.3990
+1625.0s 678 Current Train Loss: 1.5269
+1627.3s 679 Current Train Loss: 1.4650
+1629.5s 680 Current Train Loss: 1.5825
+1631.6s 681 Current Train Loss: 1.5362
+1633.7s 682 Current Train Loss: 1.5262
+1635.8s 683 Current Train Loss: 1.6510
+1638.1s 684 Current Train Loss: 1.5393
+1640.2s 685 Current Train Loss: 1.3887
+1643.1s 686 Current Train Loss: 1.5007
+1645.3s 687 Current Train Loss: 1.4633
+1647.5s 688 Current Train Loss: 1.4780
+1649.6s 689 Current Train Loss: 1.5159
+1651.8s 690 Current Train Loss: 1.5742
+1654.0s 691 Current Train Loss: 1.4910
+1656.3s 692 Current Train Loss: 1.4083
+1658.6s 693 Current Train Loss: 1.4344
+1660.8s 694 Current Train Loss: 1.4503
+1663.1s 695 Current Train Loss: 1.4440
+1665.2s 696 Current Train Loss: 1.4612
+1667.5s 697 Current Train Loss: 1.5820
+1669.7s 698 Current Train Loss: 1.5187
+1672.0s 699 Current Train Loss: 1.5229
+1674.6s 700 Current Train Loss: 1.4552
+1676.9s 701 Current Train Loss: 1.4960
+1679.0s 702 Current Train Loss: 1.4985
+1681.3s 703 Current Train Loss: 1.4609
+1683.5s 704 Current Train Loss: 1.3551
+1685.8s 705 Current Train Loss: 1.4271
+1687.9s 706 Current Train Loss: 1.4971
+1690.2s 707 Current Train Loss: 1.4369
+1692.5s 708 Current Train Loss: 1.4922
+1694.7s 709 Current Train Loss: 1.4265
+1697.0s 710 Current Train Loss: 1.5524
+1699.3s 711 Current Train Loss: 1.5099
+1701.6s 712 Current Train Loss: 1.5406
+1703.8s 713 Current Train Loss: 1.4641
+1706.3s 714 Current Train Loss: 1.5133
+1708.6s 715 Current Train Loss: 1.4487
+1710.9s 716 Current Train Loss: 1.6006
+1713.2s 717 Current Train Loss: 1.3750
+1715.3s 718 Current Train Loss: 1.4473
+1717.7s 719 Current Train Loss: 1.4594
+1719.9s 720 Current Train Loss: 1.4212
+1722.1s 721 Current Train Loss: 1.4306
+1724.3s 722 Current Train Loss: 1.5317
+1726.5s 723 Current Train Loss: 1.4823
+1728.5s 724 Current Train Loss: 1.4499
+1730.6s 725 Current Train Loss: 1.5119
+1732.7s 726 Current Train Loss: 1.4889
+1734.3s 727 Current Train Loss: 1.4906
+1734.3s 728 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1734.3s 729 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1734.3s 730 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1734.3s 731 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1781.9s 732 Epoch [8/20] Train Loss: 1.4886 Val Loss: 1.4638 Val Acc: 50.80%
+1781.9s 733 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1781.9s 734 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1781.9s 735 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1781.9s 736 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1785.6s 737 Current Train Loss: 1.3803
+1787.9s 738 Current Train Loss: 1.5500
+1790.1s 739 Current Train Loss: 1.5548
+1792.5s 740 Current Train Loss: 1.4217
+1794.7s 741 Current Train Loss: 1.5608
+1796.9s 742 Current Train Loss: 1.4497
+1799.1s 743 Current Train Loss: 1.4452
+1802.0s 744 Current Train Loss: 1.4969
+1804.2s 745 Current Train Loss: 1.3811
+1806.4s 746 Current Train Loss: 1.4336
+1808.5s 747 Current Train Loss: 1.5060
+1810.8s 748 Current Train Loss: 1.4682
+1813.1s 749 Current Train Loss: 1.4503
+1815.2s 750 Current Train Loss: 1.4171
+1817.4s 751 Current Train Loss: 1.4115
+1819.7s 752 Current Train Loss: 1.3822
+1821.9s 753 Current Train Loss: 1.5190
+1824.0s 754 Current Train Loss: 1.4724
+1826.1s 755 Current Train Loss: 1.5214
+1828.4s 756 Current Train Loss: 1.4843
+1830.5s 757 Current Train Loss: 1.4081
+1833.0s 758 Current Train Loss: 1.3508
+1835.2s 759 Current Train Loss: 1.5329
+1837.5s 760 Current Train Loss: 1.4465
+1839.6s 761 Current Train Loss: 1.3948
+1841.7s 762 Current Train Loss: 1.4310
+1843.9s 763 Current Train Loss: 1.4449
+1846.0s 764 Current Train Loss: 1.4887
+1848.1s 765 Current Train Loss: 1.4962
+1850.4s 766 Current Train Loss: 1.4121
+1852.7s 767 Current Train Loss: 1.5552
+1854.9s 768 Current Train Loss: 1.5983
+1857.2s 769 Current Train Loss: 1.4932
+1859.4s 770 Current Train Loss: 1.5192
+1861.7s 771 Current Train Loss: 1.4386
+1864.1s 772 Current Train Loss: 1.5038
+1866.3s 773 Current Train Loss: 1.3831
+1868.4s 774 Current Train Loss: 1.5176
+1870.5s 775 Current Train Loss: 1.4697
+1872.7s 776 Current Train Loss: 1.5783
+1875.0s 777 Current Train Loss: 1.4132
+1877.3s 778 Current Train Loss: 1.6041
+1879.5s 779 Current Train Loss: 1.4258
+1881.8s 780 Current Train Loss: 1.4522
+1884.0s 781 Current Train Loss: 1.4992
+1886.2s 782 Current Train Loss: 1.4703
+1888.4s 783 Current Train Loss: 1.4787
+1890.7s 784 Current Train Loss: 1.3698
+1892.9s 785 Current Train Loss: 1.5304
+1895.2s 786 Current Train Loss: 1.5315
+1897.7s 787 Current Train Loss: 1.5233
+1900.1s 788 Current Train Loss: 1.5336
+1902.3s 789 Current Train Loss: 1.4124
+1904.5s 790 Current Train Loss: 1.5397
+1906.7s 791 Current Train Loss: 1.5285
+1908.9s 792 Current Train Loss: 1.5071
+1911.1s 793 Current Train Loss: 1.4509
+1913.2s 794 Current Train Loss: 1.4515
+1915.4s 795 Current Train Loss: 1.4812
+1917.7s 796 Current Train Loss: 1.4717
+1919.8s 797 Current Train Loss: 1.5169
+1922.0s 798 Current Train Loss: 1.4385
+1924.1s 799 Current Train Loss: 1.4228
+1926.4s 800 Current Train Loss: 1.4070
+1928.8s 801 Current Train Loss: 1.3735
+1930.9s 802 Current Train Loss: 1.3962
+1933.2s 803 Current Train Loss: 1.4878
+1935.4s 804 Current Train Loss: 1.4303
+1937.6s 805 Current Train Loss: 1.4397
+1939.8s 806 Current Train Loss: 1.5228
+1941.9s 807 Current Train Loss: 1.4786
+1944.0s 808 Current Train Loss: 1.5010
+1946.0s 809 Current Train Loss: 1.4460
+1947.6s 810 Current Train Loss: 1.4613
+1947.6s 811 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1947.6s 812 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1947.6s 813 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1947.6s 814 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1994.7s 815 Epoch [9/20] Train Loss: 1.4698 Val Loss: 1.4562 Val Acc: 49.61%
+1994.7s 816 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1994.7s 817 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1994.7s 818 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+1994.7s 819 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+1998.2s 820 Current Train Loss: 1.4469
+2000.5s 821 Current Train Loss: 1.4730
+2002.8s 822 Current Train Loss: 1.4772
+2005.1s 823 Current Train Loss: 1.4359
+2007.4s 824 Current Train Loss: 1.3805
+2009.5s 825 Current Train Loss: 1.5144
+2011.8s 826 Current Train Loss: 1.3653
+2013.9s 827 Current Train Loss: 1.5227
+2016.2s 828 Current Train Loss: 1.4027
+2018.5s 829 Current Train Loss: 1.4637
+2020.6s 830 Current Train Loss: 1.4382
+2023.6s 831 Current Train Loss: 1.6019
+2025.9s 832 Current Train Loss: 1.4514
+2028.1s 833 Current Train Loss: 1.4150
+2030.4s 834 Current Train Loss: 1.4628
+2032.6s 835 Current Train Loss: 1.5066
+2034.7s 836 Current Train Loss: 1.4287
+2036.9s 837 Current Train Loss: 1.5647
+2039.1s 838 Current Train Loss: 1.4750
+2041.5s 839 Current Train Loss: 1.5252
+2043.8s 840 Current Train Loss: 1.3866
+2045.9s 841 Current Train Loss: 1.4277
+2048.0s 842 Current Train Loss: 1.4669
+2050.1s 843 Current Train Loss: 1.5331
+2052.3s 844 Current Train Loss: 1.5071
+2054.7s 845 Current Train Loss: 1.3767
+2057.0s 846 Current Train Loss: 1.3389
+2059.1s 847 Current Train Loss: 1.5130
+2061.4s 848 Current Train Loss: 1.3499
+2063.5s 849 Current Train Loss: 1.4075
+2065.6s 850 Current Train Loss: 1.4536
+2067.7s 851 Current Train Loss: 1.4362
+2069.9s 852 Current Train Loss: 1.3468
+2072.0s 853 Current Train Loss: 1.3578
+2074.1s 854 Current Train Loss: 1.4685
+2076.2s 855 Current Train Loss: 1.4425
+2078.3s 856 Current Train Loss: 1.4426
+2080.4s 857 Current Train Loss: 1.4263
+2082.7s 858 Current Train Loss: 1.5321
+2084.8s 859 Current Train Loss: 1.4521
+2087.7s 860 Current Train Loss: 1.4768
+2089.8s 861 Current Train Loss: 1.3057
+2092.1s 862 Current Train Loss: 1.4267
+2094.2s 863 Current Train Loss: 1.4484
+2096.4s 864 Current Train Loss: 1.4365
+2098.6s 865 Current Train Loss: 1.4929
+2100.9s 866 Current Train Loss: 1.4360
+2103.2s 867 Current Train Loss: 1.5284
+2105.5s 868 Current Train Loss: 1.4837
+2107.6s 869 Current Train Loss: 1.3696
+2109.7s 870 Current Train Loss: 1.3520
+2111.9s 871 Current Train Loss: 1.4512
+2113.9s 872 Current Train Loss: 1.4901
+2116.2s 873 Current Train Loss: 1.4381
+2119.1s 874 Current Train Loss: 1.4460
+2121.4s 875 Current Train Loss: 1.3969
+2123.5s 876 Current Train Loss: 1.5638
+2125.8s 877 Current Train Loss: 1.4884
+2127.9s 878 Current Train Loss: 1.4193
+2130.0s 879 Current Train Loss: 1.5275
+2132.3s 880 Current Train Loss: 1.4645
+2134.6s 881 Current Train Loss: 1.3494
+2136.9s 882 Current Train Loss: 1.4487
+2139.1s 883 Current Train Loss: 1.4550
+2141.2s 884 Current Train Loss: 1.3401
+2143.3s 885 Current Train Loss: 1.5066
+2145.4s 886 Current Train Loss: 1.5721
+2147.5s 887 Current Train Loss: 1.5565
+2149.8s 888 Current Train Loss: 1.4037
+2152.0s 889 Current Train Loss: 1.4600
+2154.0s 890 Current Train Loss: 1.3697
+2156.1s 891 Current Train Loss: 1.4764
+2158.2s 892 Current Train Loss: 1.5029
+2159.7s 893 Current Train Loss: 1.5839
+2159.7s 894 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2159.7s 895 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2159.7s 896 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2159.7s 897 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2207.6s 898 Epoch [10/20] Train Loss: 1.4525 Val Loss: 1.4369 Val Acc: 52.24%
+2207.6s 899 Checkpoint saved at epoch 10 to /kaggle/working/linear_classifier_epoch_10.pth
+2207.6s 900 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2207.6s 901 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2207.6s 902 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2207.6s 903 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2211.3s 904 Current Train Loss: 1.6059
+2214.0s 905 Current Train Loss: 1.4617
+2216.2s 906 Current Train Loss: 1.3456
+2218.5s 907 Current Train Loss: 1.5084
+2220.9s 908 Current Train Loss: 1.4431
+2223.2s 909 Current Train Loss: 1.4907
+2225.3s 910 Current Train Loss: 1.4829
+2227.4s 911 Current Train Loss: 1.3768
+2229.7s 912 Current Train Loss: 1.3978
+2232.0s 913 Current Train Loss: 1.4622
+2234.1s 914 Current Train Loss: 1.4741
+2236.3s 915 Current Train Loss: 1.3886
+2238.5s 916 Current Train Loss: 1.5087
+2240.6s 917 Current Train Loss: 1.4816
+2242.7s 918 Current Train Loss: 1.3898
+2244.9s 919 Current Train Loss: 1.3798
+2247.1s 920 Current Train Loss: 1.4197
+2249.2s 921 Current Train Loss: 1.3955
+2251.4s 922 Current Train Loss: 1.3842
+2253.5s 923 Current Train Loss: 1.4141
+2255.8s 924 Current Train Loss: 1.4414
+2258.0s 925 Current Train Loss: 1.2861
+2260.0s 926 Current Train Loss: 1.4253
+2262.2s 927 Current Train Loss: 1.4334
+2264.3s 928 Current Train Loss: 1.4624
+2266.6s 929 Current Train Loss: 1.4095
+2268.9s 930 Current Train Loss: 1.3968
+2271.1s 931 Current Train Loss: 1.3967
+2273.5s 932 Current Train Loss: 1.3976
+2275.8s 933 Current Train Loss: 1.4597
+2278.1s 934 Current Train Loss: 1.5441
+2280.4s 935 Current Train Loss: 1.4376
+2282.7s 936 Current Train Loss: 1.4507
+2285.0s 937 Current Train Loss: 1.3668
+2287.3s 938 Current Train Loss: 1.4770
+2289.5s 939 Current Train Loss: 1.5117
+2291.7s 940 Current Train Loss: 1.4758
+2294.0s 941 Current Train Loss: 1.4380
+2296.2s 942 Current Train Loss: 1.4535
+2298.3s 943 Current Train Loss: 1.3861
+2300.5s 944 Current Train Loss: 1.4507
+2302.7s 945 Current Train Loss: 1.4768
+2305.0s 946 Current Train Loss: 1.4942
+2307.1s 947 Current Train Loss: 1.3888
+2309.4s 948 Current Train Loss: 1.3785
+2311.7s 949 Current Train Loss: 1.4345
+2313.8s 950 Current Train Loss: 1.4175
+2316.1s 951 Current Train Loss: 1.4119
+2318.2s 952 Current Train Loss: 1.5520
+2320.3s 953 Current Train Loss: 1.4081
+2322.6s 954 Current Train Loss: 1.3969
+2324.8s 955 Current Train Loss: 1.5070
+2327.0s 956 Current Train Loss: 1.4121
+2329.4s 957 Current Train Loss: 1.4562
+2331.8s 958 Current Train Loss: 1.4417
+2334.0s 959 Current Train Loss: 1.3834
+2336.2s 960 Current Train Loss: 1.4075
+2338.2s 961 Current Train Loss: 1.4304
+2340.9s 962 Current Train Loss: 1.4101
+2343.1s 963 Current Train Loss: 1.4766
+2345.4s 964 Current Train Loss: 1.4397
+2347.7s 965 Current Train Loss: 1.4289
+2349.9s 966 Current Train Loss: 1.4700
+2352.2s 967 Current Train Loss: 1.4205
+2354.3s 968 Current Train Loss: 1.2727
+2356.7s 969 Current Train Loss: 1.5036
+2358.9s 970 Current Train Loss: 1.5392
+2361.0s 971 Current Train Loss: 1.4072
+2363.4s 972 Current Train Loss: 1.4244
+2365.7s 973 Current Train Loss: 1.4548
+2367.8s 974 Current Train Loss: 1.5000
+2369.9s 975 Current Train Loss: 1.5174
+2372.5s 976 Current Train Loss: 1.4122
+2374.1s 977 Current Train Loss: 1.3856
+2374.1s 978 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2374.1s 979 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2374.1s 980 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2374.1s 981 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2421.6s 982 Epoch [11/20] Train Loss: 1.4375 Val Loss: 1.4192 Val Acc: 51.52%
+2421.6s 983 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2421.6s 984 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2421.6s 985 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2421.6s 986 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2425.1s 987 Current Train Loss: 1.4634
+2427.4s 988 Current Train Loss: 1.4775
+2429.6s 989 Current Train Loss: 1.4301
+2431.8s 990 Current Train Loss: 1.4594
+2434.0s 991 Current Train Loss: 1.4647
+2436.2s 992 Current Train Loss: 1.4138
+2438.5s 993 Current Train Loss: 1.4305
+2440.6s 994 Current Train Loss: 1.3513
+2442.8s 995 Current Train Loss: 1.4501
+2445.1s 996 Current Train Loss: 1.4705
+2447.3s 997 Current Train Loss: 1.3771
+2449.4s 998 Current Train Loss: 1.5489
+2451.8s 999 Current Train Loss: 1.4783
+2453.9s 1000 Current Train Loss: 1.3459
+2456.1s 1001 Current Train Loss: 1.4312
+2458.4s 1002 Current Train Loss: 1.5075
+2460.5s 1003 Current Train Loss: 1.3722
+2462.8s 1004 Current Train Loss: 1.5223
+2464.9s 1005 Current Train Loss: 1.3922
+2467.3s 1006 Current Train Loss: 1.4256
+2469.4s 1007 Current Train Loss: 1.4984
+2471.5s 1008 Current Train Loss: 1.3708
+2473.7s 1009 Current Train Loss: 1.5113
+2475.8s 1010 Current Train Loss: 1.3956
+2478.0s 1011 Current Train Loss: 1.4329
+2480.3s 1012 Current Train Loss: 1.4096
+2482.7s 1013 Current Train Loss: 1.4661
+2484.8s 1014 Current Train Loss: 1.4128
+2487.0s 1015 Current Train Loss: 1.3489
+2489.2s 1016 Current Train Loss: 1.3482
+2491.3s 1017 Current Train Loss: 1.3954
+2493.5s 1018 Current Train Loss: 1.3724
+2495.8s 1019 Current Train Loss: 1.4343
+2498.3s 1020 Current Train Loss: 1.4447
+2500.7s 1021 Current Train Loss: 1.3596
+2503.0s 1022 Current Train Loss: 1.4415
+2505.1s 1023 Current Train Loss: 1.3921
+2507.4s 1024 Current Train Loss: 1.3709
+2509.8s 1025 Current Train Loss: 1.4236
+2512.1s 1026 Current Train Loss: 1.4162
+2514.5s 1027 Current Train Loss: 1.5148
+2516.8s 1028 Current Train Loss: 1.3524
+2519.1s 1029 Current Train Loss: 1.5364
+2521.2s 1030 Current Train Loss: 1.3890
+2523.5s 1031 Current Train Loss: 1.3993
+2525.8s 1032 Current Train Loss: 1.4648
+2528.1s 1033 Current Train Loss: 1.3337
+2530.4s 1034 Current Train Loss: 1.3863
+2532.7s 1035 Current Train Loss: 1.4638
+2534.9s 1036 Current Train Loss: 1.3892
+2537.2s 1037 Current Train Loss: 1.3649
+2539.5s 1038 Current Train Loss: 1.3444
+2541.8s 1039 Current Train Loss: 1.4416
+2544.1s 1040 Current Train Loss: 1.4981
+2546.4s 1041 Current Train Loss: 1.3341
+2548.4s 1042 Current Train Loss: 1.3426
+2550.5s 1043 Current Train Loss: 1.5124
+2552.8s 1044 Current Train Loss: 1.5993
+2555.0s 1045 Current Train Loss: 1.3473
+2557.2s 1046 Current Train Loss: 1.3655
+2559.4s 1047 Current Train Loss: 1.3656
+2561.9s 1048 Current Train Loss: 1.3701
+2564.2s 1049 Current Train Loss: 1.4508
+2566.3s 1050 Current Train Loss: 1.4502
+2568.4s 1051 Current Train Loss: 1.3139
+2570.7s 1052 Current Train Loss: 1.4171
+2572.9s 1053 Current Train Loss: 1.4235
+2575.0s 1054 Current Train Loss: 1.4383
+2577.4s 1055 Current Train Loss: 1.4603
+2579.6s 1056 Current Train Loss: 1.3683
+2581.8s 1057 Current Train Loss: 1.3826
+2583.9s 1058 Current Train Loss: 1.5555
+2586.0s 1059 Current Train Loss: 1.3620
+2587.5s 1060 Current Train Loss: 1.4280
+2587.6s 1061 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2587.6s 1062 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2587.6s 1063 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2587.6s 1064 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2635.7s 1065 Epoch [12/20] Train Loss: 1.4220 Val Loss: 1.4079 Val Acc: 52.46%
+2635.7s 1066 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2635.7s 1067 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2635.7s 1068 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2635.7s 1069 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2639.3s 1070 Current Train Loss: 1.4047
+2641.6s 1071 Current Train Loss: 1.4638
+2643.8s 1072 Current Train Loss: 1.5231
+2646.0s 1073 Current Train Loss: 1.3356
+2648.3s 1074 Current Train Loss: 1.4610
+2650.6s 1075 Current Train Loss: 1.4420
+2652.7s 1076 Current Train Loss: 1.4667
+2655.3s 1077 Current Train Loss: 1.3921
+2657.5s 1078 Current Train Loss: 1.4913
+2659.8s 1079 Current Train Loss: 1.3792
+2662.2s 1080 Current Train Loss: 1.3992
+2664.5s 1081 Current Train Loss: 1.5802
+2666.7s 1082 Current Train Loss: 1.2898
+2668.9s 1083 Current Train Loss: 1.4896
+2671.0s 1084 Current Train Loss: 1.4594
+2673.1s 1085 Current Train Loss: 1.4639
+2675.2s 1086 Current Train Loss: 1.3912
+2677.4s 1087 Current Train Loss: 1.4353
+2679.5s 1088 Current Train Loss: 1.4706
+2682.0s 1089 Current Train Loss: 1.3560
+2684.3s 1090 Current Train Loss: 1.3975
+2686.5s 1091 Current Train Loss: 1.4202
+2688.8s 1092 Current Train Loss: 1.4663
+2691.0s 1093 Current Train Loss: 1.4988
+2693.3s 1094 Current Train Loss: 1.4472
+2695.6s 1095 Current Train Loss: 1.4152
+2698.2s 1096 Current Train Loss: 1.4018
+2700.3s 1097 Current Train Loss: 1.4024
+2702.6s 1098 Current Train Loss: 1.3614
+2704.8s 1099 Current Train Loss: 1.3568
+2707.0s 1100 Current Train Loss: 1.3475
+2709.3s 1101 Current Train Loss: 1.4626
+2711.4s 1102 Current Train Loss: 1.4764
+2713.6s 1103 Current Train Loss: 1.2223
+2715.9s 1104 Current Train Loss: 1.4794
+2718.3s 1105 Current Train Loss: 1.4397
+2720.6s 1106 Current Train Loss: 1.3753
+2722.9s 1107 Current Train Loss: 1.3195
+2725.1s 1108 Current Train Loss: 1.4214
+2727.4s 1109 Current Train Loss: 1.4147
+2729.6s 1110 Current Train Loss: 1.4118
+2731.8s 1111 Current Train Loss: 1.3522
+2734.1s 1112 Current Train Loss: 1.4363
+2736.4s 1113 Current Train Loss: 1.3510
+2738.7s 1114 Current Train Loss: 1.3449
+2740.8s 1115 Current Train Loss: 1.4346
+2743.0s 1116 Current Train Loss: 1.3972
+2745.2s 1117 Current Train Loss: 1.3996
+2747.4s 1118 Current Train Loss: 1.3750
+2749.8s 1119 Current Train Loss: 1.3890
+2752.0s 1120 Current Train Loss: 1.4128
+2754.2s 1121 Current Train Loss: 1.3467
+2756.3s 1122 Current Train Loss: 1.3633
+2758.6s 1123 Current Train Loss: 1.4018
+2760.7s 1124 Current Train Loss: 1.3712
+2762.9s 1125 Current Train Loss: 1.3888
+2765.1s 1126 Current Train Loss: 1.4111
+2767.2s 1127 Current Train Loss: 1.3844
+2769.4s 1128 Current Train Loss: 1.4045
+2771.8s 1129 Current Train Loss: 1.4290
+2773.9s 1130 Current Train Loss: 1.3699
+2776.1s 1131 Current Train Loss: 1.4899
+2778.4s 1132 Current Train Loss: 1.3632
+2780.5s 1133 Current Train Loss: 1.4246
+2782.9s 1134 Current Train Loss: 1.4855
+2785.1s 1135 Current Train Loss: 1.3952
+2787.2s 1136 Current Train Loss: 1.3775
+2789.5s 1137 Current Train Loss: 1.4969
+2791.8s 1138 Current Train Loss: 1.3674
+2793.9s 1139 Current Train Loss: 1.3350
+2795.9s 1140 Current Train Loss: 1.4361
+2798.0s 1141 Current Train Loss: 1.4213
+2800.1s 1142 Current Train Loss: 1.4467
+2801.7s 1143 Current Train Loss: 1.4262
+2801.8s 1144 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2801.8s 1145 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2801.8s 1146 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2801.8s 1147 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2850.1s 1148 Epoch [13/20] Train Loss: 1.4117 Val Loss: 1.3944 Val Acc: 52.89%
+2850.2s 1149 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2850.2s 1150 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2850.2s 1151 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+2850.2s 1152 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+2853.9s 1153 Current Train Loss: 1.4834
+2856.1s 1154 Current Train Loss: 1.4318
+2858.4s 1155 Current Train Loss: 1.3503
+2860.7s 1156 Current Train Loss: 1.3536
+2862.9s 1157 Current Train Loss: 1.3908
+2865.1s 1158 Current Train Loss: 1.3663
+2867.3s 1159 Current Train Loss: 1.3567
+2869.6s 1160 Current Train Loss: 1.3705
+2871.9s 1161 Current Train Loss: 1.4006
+2874.0s 1162 Current Train Loss: 1.3215
+2876.3s 1163 Current Train Loss: 1.3917
+2878.5s 1164 Current Train Loss: 1.4521
+2880.8s 1165 Current Train Loss: 1.4125
+2883.0s 1166 Current Train Loss: 1.4624
+2885.1s 1167 Current Train Loss: 1.3984
+2887.2s 1168 Current Train Loss: 1.2823
+2889.5s 1169 Current Train Loss: 1.3227
+2891.6s 1170 Current Train Loss: 1.5301
+2893.9s 1171 Current Train Loss: 1.3809
+2896.1s 1172 Current Train Loss: 1.4372
+2898.3s 1173 Current Train Loss: 1.4144
+2900.6s 1174 Current Train Loss: 1.4140
+2902.8s 1175 Current Train Loss: 1.2871
+2904.9s 1176 Current Train Loss: 1.4732
+2907.0s 1177 Current Train Loss: 1.4748
+2909.5s 1178 Current Train Loss: 1.4570
+2911.8s 1179 Current Train Loss: 1.3796
+2914.0s 1180 Current Train Loss: 1.4240
+2916.1s 1181 Current Train Loss: 1.4003
+2918.3s 1182 Current Train Loss: 1.3465
+2920.5s 1183 Current Train Loss: 1.4615
+2922.7s 1184 Current Train Loss: 1.4375
+2924.9s 1185 Current Train Loss: 1.4003
+2927.1s 1186 Current Train Loss: 1.3870
+2929.4s 1187 Current Train Loss: 1.3669
+2931.6s 1188 Current Train Loss: 1.4977
+2934.0s 1189 Current Train Loss: 1.3257
+2936.3s 1190 Current Train Loss: 1.2432
+2938.5s 1191 Current Train Loss: 1.4091
+2941.0s 1192 Current Train Loss: 1.5208
+2943.4s 1193 Current Train Loss: 1.3380
+2945.6s 1194 Current Train Loss: 1.3379
+2947.9s 1195 Current Train Loss: 1.2915
+2950.3s 1196 Current Train Loss: 1.3698
+2952.7s 1197 Current Train Loss: 1.4362
+2955.0s 1198 Current Train Loss: 1.4339
+2957.4s 1199 Current Train Loss: 1.3674
+2959.7s 1200 Current Train Loss: 1.3103
+2961.9s 1201 Current Train Loss: 1.3741
+2964.1s 1202 Current Train Loss: 1.4153
+2966.4s 1203 Current Train Loss: 1.3930
+2968.7s 1204 Current Train Loss: 1.4015
+2971.0s 1205 Current Train Loss: 1.3530
+2973.3s 1206 Current Train Loss: 1.3877
+2975.7s 1207 Current Train Loss: 1.4361
+2977.8s 1208 Current Train Loss: 1.4689
+2980.3s 1209 Current Train Loss: 1.3925
+2982.6s 1210 Current Train Loss: 1.3792
+2985.0s 1211 Current Train Loss: 1.4000
+2987.2s 1212 Current Train Loss: 1.3982
+2989.6s 1213 Current Train Loss: 1.4813
+2992.0s 1214 Current Train Loss: 1.4536
+2994.4s 1215 Current Train Loss: 1.4296
+2996.8s 1216 Current Train Loss: 1.3624
+2999.1s 1217 Current Train Loss: 1.3641
+3001.5s 1218 Current Train Loss: 1.3302
+3004.5s 1219 Current Train Loss: 1.4853
+3006.8s 1220 Current Train Loss: 1.4289
+3009.1s 1221 Current Train Loss: 1.4674
+3011.4s 1222 Current Train Loss: 1.4837
+3013.6s 1223 Current Train Loss: 1.4501
+3015.8s 1224 Current Train Loss: 1.4154
+3018.0s 1225 Current Train Loss: 1.3949
+3019.6s 1226 Current Train Loss: 1.3913
+3019.6s 1227 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3019.6s 1228 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3019.6s 1229 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3019.6s 1230 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3068.8s 1231 Epoch [14/20] Train Loss: 1.4005 Val Loss: 1.3820 Val Acc: 52.13%
+3068.8s 1232 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3068.8s 1233 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3068.8s 1234 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3068.8s 1235 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3072.3s 1236 Current Train Loss: 1.4345
+3074.6s 1237 Current Train Loss: 1.3576
+3076.8s 1238 Current Train Loss: 1.3111
+3079.1s 1239 Current Train Loss: 1.3500
+3081.3s 1240 Current Train Loss: 1.4098
+3083.7s 1241 Current Train Loss: 1.4162
+3086.0s 1242 Current Train Loss: 1.4022
+3088.3s 1243 Current Train Loss: 1.4603
+3090.5s 1244 Current Train Loss: 1.4037
+3092.8s 1245 Current Train Loss: 1.3956
+3095.2s 1246 Current Train Loss: 1.5155
+3097.4s 1247 Current Train Loss: 1.3731
+3099.9s 1248 Current Train Loss: 1.5001
+3102.1s 1249 Current Train Loss: 1.3633
+3104.5s 1250 Current Train Loss: 1.3379
+3106.7s 1251 Current Train Loss: 1.4937
+3109.1s 1252 Current Train Loss: 1.3570
+3111.3s 1253 Current Train Loss: 1.3255
+3113.6s 1254 Current Train Loss: 1.4057
+3116.0s 1255 Current Train Loss: 1.4177
+3118.4s 1256 Current Train Loss: 1.4013
+3120.6s 1257 Current Train Loss: 1.3302
+3123.0s 1258 Current Train Loss: 1.3471
+3125.5s 1259 Current Train Loss: 1.3987
+3127.8s 1260 Current Train Loss: 1.3909
+3130.5s 1261 Current Train Loss: 1.4059
+3132.7s 1262 Current Train Loss: 1.3860
+3135.1s 1263 Current Train Loss: 1.2807
+3137.3s 1264 Current Train Loss: 1.3555
+3139.5s 1265 Current Train Loss: 1.3477
+3141.8s 1266 Current Train Loss: 1.4562
+3144.1s 1267 Current Train Loss: 1.4492
+3146.5s 1268 Current Train Loss: 1.4169
+3148.8s 1269 Current Train Loss: 1.3437
+3151.2s 1270 Current Train Loss: 1.3801
+3153.6s 1271 Current Train Loss: 1.3974
+3155.9s 1272 Current Train Loss: 1.2786
+3158.2s 1273 Current Train Loss: 1.3858
+3160.4s 1274 Current Train Loss: 1.4238
+3163.0s 1275 Current Train Loss: 1.3690
+3165.3s 1276 Current Train Loss: 1.3445
+3167.7s 1277 Current Train Loss: 1.4214
+3169.9s 1278 Current Train Loss: 1.3522
+3172.4s 1279 Current Train Loss: 1.5044
+3174.6s 1280 Current Train Loss: 1.3729
+3177.0s 1281 Current Train Loss: 1.3296
+3179.4s 1282 Current Train Loss: 1.3214
+3181.8s 1283 Current Train Loss: 1.3065
+3184.2s 1284 Current Train Loss: 1.3627
+3186.6s 1285 Current Train Loss: 1.5182
+3188.9s 1286 Current Train Loss: 1.3466
+3191.3s 1287 Current Train Loss: 1.3526
+3194.0s 1288 Current Train Loss: 1.3368
+3196.4s 1289 Current Train Loss: 1.3799
+3198.8s 1290 Current Train Loss: 1.5118
+3201.1s 1291 Current Train Loss: 1.3355
+3203.3s 1292 Current Train Loss: 1.3606
+3205.6s 1293 Current Train Loss: 1.3145
+3208.0s 1294 Current Train Loss: 1.3152
+3210.2s 1295 Current Train Loss: 1.4068
+3212.6s 1296 Current Train Loss: 1.4253
+3214.9s 1297 Current Train Loss: 1.3622
+3217.3s 1298 Current Train Loss: 1.4380
+3219.7s 1299 Current Train Loss: 1.3693
+3222.2s 1300 Current Train Loss: 1.3969
+3225.0s 1301 Current Train Loss: 1.4101
+3227.3s 1302 Current Train Loss: 1.3165
+3229.5s 1303 Current Train Loss: 1.4807
+3231.9s 1304 Current Train Loss: 1.3846
+3234.2s 1305 Current Train Loss: 1.4512
+3236.3s 1306 Current Train Loss: 1.4670
+3238.5s 1307 Current Train Loss: 1.3525
+3240.7s 1308 Current Train Loss: 1.3837
+3242.3s 1309 Current Train Loss: 1.4635
+3242.4s 1310 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3242.4s 1311 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3242.4s 1312 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3242.4s 1313 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3291.9s 1314 Epoch [15/20] Train Loss: 1.3888 Val Loss: 1.3781 Val Acc: 52.35%
+3291.9s 1315 Checkpoint saved at epoch 15 to /kaggle/working/linear_classifier_epoch_15.pth
+3291.9s 1316 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3291.9s 1317 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3291.9s 1318 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3291.9s 1319 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3295.3s 1320 Current Train Loss: 1.3651
+3297.7s 1321 Current Train Loss: 1.3522
+3300.0s 1322 Current Train Loss: 1.3923
+3302.5s 1323 Current Train Loss: 1.3994
+3304.8s 1324 Current Train Loss: 1.3339
+3307.0s 1325 Current Train Loss: 1.4787
+3309.4s 1326 Current Train Loss: 1.3905
+3311.7s 1327 Current Train Loss: 1.4207
+3314.0s 1328 Current Train Loss: 1.3940
+3316.4s 1329 Current Train Loss: 1.4108
+3318.7s 1330 Current Train Loss: 1.3858
+3321.0s 1331 Current Train Loss: 1.2956
+3323.5s 1332 Current Train Loss: 1.5365
+3325.6s 1333 Current Train Loss: 1.3389
+3327.9s 1334 Current Train Loss: 1.3364
+3330.1s 1335 Current Train Loss: 1.5823
+3332.5s 1336 Current Train Loss: 1.3356
+3334.7s 1337 Current Train Loss: 1.4102
+3337.0s 1338 Current Train Loss: 1.4289
+3339.3s 1339 Current Train Loss: 1.4393
+3341.7s 1340 Current Train Loss: 1.4057
+3344.1s 1341 Current Train Loss: 1.3593
+3346.3s 1342 Current Train Loss: 1.4666
+3348.7s 1343 Current Train Loss: 1.4124
+3351.2s 1344 Current Train Loss: 1.4348
+3353.4s 1345 Current Train Loss: 1.3692
+3355.8s 1346 Current Train Loss: 1.3372
+3358.1s 1347 Current Train Loss: 1.3220
+3360.4s 1348 Current Train Loss: 1.3895
+3362.8s 1349 Current Train Loss: 1.4263
+3365.1s 1350 Current Train Loss: 1.4696
+3367.3s 1351 Current Train Loss: 1.3067
+3369.5s 1352 Current Train Loss: 1.3903
+3371.8s 1353 Current Train Loss: 1.4550
+3374.0s 1354 Current Train Loss: 1.4790
+3376.2s 1355 Current Train Loss: 1.4366
+3378.6s 1356 Current Train Loss: 1.3573
+3380.8s 1357 Current Train Loss: 1.4146
+3383.3s 1358 Current Train Loss: 1.4407
+3385.5s 1359 Current Train Loss: 1.3967
+3387.8s 1360 Current Train Loss: 1.3586
+3390.0s 1361 Current Train Loss: 1.4009
+3392.5s 1362 Current Train Loss: 1.4590
+3394.8s 1363 Current Train Loss: 1.3542
+3397.1s 1364 Current Train Loss: 1.4020
+3399.4s 1365 Current Train Loss: 1.4073
+3401.8s 1366 Current Train Loss: 1.4132
+3404.0s 1367 Current Train Loss: 1.2892
+3406.4s 1368 Current Train Loss: 1.3439
+3408.7s 1369 Current Train Loss: 1.3077
+3410.9s 1370 Current Train Loss: 1.3521
+3413.4s 1371 Current Train Loss: 1.3153
+3415.7s 1372 Current Train Loss: 1.3826
+3418.1s 1373 Current Train Loss: 1.3383
+3420.4s 1374 Current Train Loss: 1.3821
+3422.7s 1375 Current Train Loss: 1.3350
+3425.0s 1376 Current Train Loss: 1.4700
+3427.4s 1377 Current Train Loss: 1.3297
+3429.6s 1378 Current Train Loss: 1.3222
+3431.9s 1379 Current Train Loss: 1.2318
+3434.2s 1380 Current Train Loss: 1.2626
+3436.6s 1381 Current Train Loss: 1.3677
+3438.7s 1382 Current Train Loss: 1.3852
+3441.1s 1383 Current Train Loss: 1.3982
+3443.5s 1384 Current Train Loss: 1.3472
+3445.9s 1385 Current Train Loss: 1.4045
+3448.2s 1386 Current Train Loss: 1.3039
+3450.5s 1387 Current Train Loss: 1.4146
+3452.8s 1388 Current Train Loss: 1.3081
+3455.0s 1389 Current Train Loss: 1.3474
+3457.2s 1390 Current Train Loss: 1.2697
+3459.3s 1391 Current Train Loss: 1.3383
+3461.5s 1392 Current Train Loss: 1.3527
+3463.1s 1393 Current Train Loss: 1.3268
+3463.2s 1394 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3463.2s 1395 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3463.2s 1396 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3463.2s 1397 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3512.7s 1398 Epoch [16/20] Train Loss: 1.3800 Val Loss: 1.3765 Val Acc: 54.02%
+3512.7s 1399 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3512.7s 1400 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3512.7s 1401 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3512.7s 1402 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3516.2s 1403 Current Train Loss: 1.4275
+3518.6s 1404 Current Train Loss: 1.3530
+3520.9s 1405 Current Train Loss: 1.3990
+3523.4s 1406 Current Train Loss: 1.3436
+3525.7s 1407 Current Train Loss: 1.4025
+3528.0s 1408 Current Train Loss: 1.3579
+3530.2s 1409 Current Train Loss: 1.3648
+3532.5s 1410 Current Train Loss: 1.3847
+3534.8s 1411 Current Train Loss: 1.3334
+3537.1s 1412 Current Train Loss: 1.4102
+3539.5s 1413 Current Train Loss: 1.3777
+3542.3s 1414 Current Train Loss: 1.4479
+3544.8s 1415 Current Train Loss: 1.3464
+3547.0s 1416 Current Train Loss: 1.2796
+3549.4s 1417 Current Train Loss: 1.4049
+3551.8s 1418 Current Train Loss: 1.3919
+3554.0s 1419 Current Train Loss: 1.4020
+3556.4s 1420 Current Train Loss: 1.3460
+3558.7s 1421 Current Train Loss: 1.3827
+3561.1s 1422 Current Train Loss: 1.3001
+3563.3s 1423 Current Train Loss: 1.3584
+3565.5s 1424 Current Train Loss: 1.3937
+3567.8s 1425 Current Train Loss: 1.3995
+3570.0s 1426 Current Train Loss: 1.3404
+3572.4s 1427 Current Train Loss: 1.4413
+3574.6s 1428 Current Train Loss: 1.3849
+3576.9s 1429 Current Train Loss: 1.4420
+3579.1s 1430 Current Train Loss: 1.2795
+3581.3s 1431 Current Train Loss: 1.4429
+3583.7s 1432 Current Train Loss: 1.4464
+3586.0s 1433 Current Train Loss: 1.2968
+3588.2s 1434 Current Train Loss: 1.3390
+3590.6s 1435 Current Train Loss: 1.3954
+3593.0s 1436 Current Train Loss: 1.4371
+3595.4s 1437 Current Train Loss: 1.3895
+3597.7s 1438 Current Train Loss: 1.4068
+3600.1s 1439 Current Train Loss: 1.4075
+3602.5s 1440 Current Train Loss: 1.3227
+3605.0s 1441 Current Train Loss: 1.3779
+3607.4s 1442 Current Train Loss: 1.3260
+3609.6s 1443 Current Train Loss: 1.2655
+3611.9s 1444 Current Train Loss: 1.3084
+3614.2s 1445 Current Train Loss: 1.4722
+3616.6s 1446 Current Train Loss: 1.2831
+3618.8s 1447 Current Train Loss: 1.3593
+3621.1s 1448 Current Train Loss: 1.3490
+3623.4s 1449 Current Train Loss: 1.3854
+3625.8s 1450 Current Train Loss: 1.3601
+3628.0s 1451 Current Train Loss: 1.3437
+3630.4s 1452 Current Train Loss: 1.3864
+3632.7s 1453 Current Train Loss: 1.3494
+3634.9s 1454 Current Train Loss: 1.3612
+3637.2s 1455 Current Train Loss: 1.3357
+3639.7s 1456 Current Train Loss: 1.3767
+3642.0s 1457 Current Train Loss: 1.4251
+3644.4s 1458 Current Train Loss: 1.2943
+3646.8s 1459 Current Train Loss: 1.2888
+3649.0s 1460 Current Train Loss: 1.3674
+3651.3s 1461 Current Train Loss: 1.3433
+3653.4s 1462 Current Train Loss: 1.4582
+3655.8s 1463 Current Train Loss: 1.4640
+3658.1s 1464 Current Train Loss: 1.4175
+3660.2s 1465 Current Train Loss: 1.2805
+3662.7s 1466 Current Train Loss: 1.3303
+3665.0s 1467 Current Train Loss: 1.2800
+3667.5s 1468 Current Train Loss: 1.3531
+3669.7s 1469 Current Train Loss: 1.3019
+3672.0s 1470 Current Train Loss: 1.5165
+3674.2s 1471 Current Train Loss: 1.3428
+3676.6s 1472 Current Train Loss: 1.4182
+3678.7s 1473 Current Train Loss: 1.3944
+3680.8s 1474 Current Train Loss: 1.3529
+3683.0s 1475 Current Train Loss: 1.4059
+3684.6s 1476 Current Train Loss: 1.4001
+3684.7s 1477 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3684.7s 1478 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3684.7s 1479 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3684.7s 1480 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3733.5s 1481 Epoch [17/20] Train Loss: 1.3710 Val Loss: 1.3585 Val Acc: 52.93%
+3733.5s 1482 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3733.5s 1483 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3733.5s 1484 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3733.5s 1485 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3737.1s 1486 Current Train Loss: 1.3155
+3739.4s 1487 Current Train Loss: 1.4029
+3741.8s 1488 Current Train Loss: 1.4256
+3744.1s 1489 Current Train Loss: 1.3035
+3746.4s 1490 Current Train Loss: 1.3519
+3748.7s 1491 Current Train Loss: 1.4494
+3751.0s 1492 Current Train Loss: 1.3993
+3753.4s 1493 Current Train Loss: 1.4077
+3755.7s 1494 Current Train Loss: 1.3297
+3758.1s 1495 Current Train Loss: 1.3088
+3760.3s 1496 Current Train Loss: 1.2754
+3763.0s 1497 Current Train Loss: 1.3228
+3765.4s 1498 Current Train Loss: 1.4286
+3767.6s 1499 Current Train Loss: 1.3943
+3769.8s 1500 Current Train Loss: 1.4458
+3772.1s 1501 Current Train Loss: 1.4153
+3774.2s 1502 Current Train Loss: 1.3396
+3776.5s 1503 Current Train Loss: 1.3485
+3778.7s 1504 Current Train Loss: 1.3262
+3781.0s 1505 Current Train Loss: 1.3404
+3783.2s 1506 Current Train Loss: 1.2454
+3785.4s 1507 Current Train Loss: 1.3692
+3787.6s 1508 Current Train Loss: 1.3698
+3790.0s 1509 Current Train Loss: 1.3436
+3792.4s 1510 Current Train Loss: 1.4491
+3795.0s 1511 Current Train Loss: 1.3147
+3797.4s 1512 Current Train Loss: 1.4243
+3799.7s 1513 Current Train Loss: 1.4057
+3802.0s 1514 Current Train Loss: 1.3562
+3804.4s 1515 Current Train Loss: 1.5035
+3806.6s 1516 Current Train Loss: 1.3452
+3809.0s 1517 Current Train Loss: 1.4067
+3811.2s 1518 Current Train Loss: 1.3603
+3813.6s 1519 Current Train Loss: 1.3635
+3816.0s 1520 Current Train Loss: 1.4654
+3818.4s 1521 Current Train Loss: 1.3468
+3820.7s 1522 Current Train Loss: 1.3616
+3823.1s 1523 Current Train Loss: 1.4185
+3825.5s 1524 Current Train Loss: 1.4331
+3827.9s 1525 Current Train Loss: 1.3077
+3830.2s 1526 Current Train Loss: 1.3352
+3832.6s 1527 Current Train Loss: 1.3733
+3834.9s 1528 Current Train Loss: 1.2918
+3837.2s 1529 Current Train Loss: 1.2829
+3839.4s 1530 Current Train Loss: 1.4257
+3841.7s 1531 Current Train Loss: 1.3596
+3843.9s 1532 Current Train Loss: 1.2804
+3846.2s 1533 Current Train Loss: 1.5218
+3848.5s 1534 Current Train Loss: 1.3627
+3850.8s 1535 Current Train Loss: 1.3378
+3853.1s 1536 Current Train Loss: 1.4897
+3855.3s 1537 Current Train Loss: 1.3870
+3858.3s 1538 Current Train Loss: 1.3102
+3860.6s 1539 Current Train Loss: 1.2959
+3862.8s 1540 Current Train Loss: 1.3159
+3865.0s 1541 Current Train Loss: 1.4102
+3867.3s 1542 Current Train Loss: 1.3372
+3869.5s 1543 Current Train Loss: 1.3560
+3871.7s 1544 Current Train Loss: 1.2982
+3874.1s 1545 Current Train Loss: 1.2768
+3876.5s 1546 Current Train Loss: 1.2953
+3878.9s 1547 Current Train Loss: 1.3626
+3881.3s 1548 Current Train Loss: 1.3514
+3883.7s 1549 Current Train Loss: 1.3397
+3885.9s 1550 Current Train Loss: 1.4060
+3888.3s 1551 Current Train Loss: 1.3469
+3890.9s 1552 Current Train Loss: 1.4283
+3893.1s 1553 Current Train Loss: 1.4340
+3895.5s 1554 Current Train Loss: 1.2447
+3897.8s 1555 Current Train Loss: 1.2738
+3899.9s 1556 Current Train Loss: 1.3384
+3902.2s 1557 Current Train Loss: 1.2899
+3904.3s 1558 Current Train Loss: 1.3589
+3906.0s 1559 Current Train Loss: 1.3326
+3906.0s 1560 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3906.0s 1561 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3906.0s 1562 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3906.0s 1563 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3955.7s 1564 Epoch [18/20] Train Loss: 1.3618 Val Loss: 1.3442 Val Acc: 55.24%
+3955.7s 1565 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3955.7s 1566 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3955.7s 1567 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+3955.7s 1568 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+3959.1s 1569 Current Train Loss: 1.3388
+3961.5s 1570 Current Train Loss: 1.3340
+3963.8s 1571 Current Train Loss: 1.3810
+3966.0s 1572 Current Train Loss: 1.4485
+3968.4s 1573 Current Train Loss: 1.4478
+3970.6s 1574 Current Train Loss: 1.3127
+3973.0s 1575 Current Train Loss: 1.3223
+3975.2s 1576 Current Train Loss: 1.3643
+3977.5s 1577 Current Train Loss: 1.3569
+3979.9s 1578 Current Train Loss: 1.3376
+3982.4s 1579 Current Train Loss: 1.3230
+3985.4s 1580 Current Train Loss: 1.4109
+3987.8s 1581 Current Train Loss: 1.3130
+3990.1s 1582 Current Train Loss: 1.2502
+3992.5s 1583 Current Train Loss: 1.4018
+3994.8s 1584 Current Train Loss: 1.3923
+3997.1s 1585 Current Train Loss: 1.3279
+3999.3s 1586 Current Train Loss: 1.3733
+4001.6s 1587 Current Train Loss: 1.2652
+4003.9s 1588 Current Train Loss: 1.3025
+4006.1s 1589 Current Train Loss: 1.3448
+4008.3s 1590 Current Train Loss: 1.3792
+4010.7s 1591 Current Train Loss: 1.4099
+4013.0s 1592 Current Train Loss: 1.3815
+4015.4s 1593 Current Train Loss: 1.2805
+4017.8s 1594 Current Train Loss: 1.2692
+4020.2s 1595 Current Train Loss: 1.4405
+4022.5s 1596 Current Train Loss: 1.4581
+4024.8s 1597 Current Train Loss: 1.4332
+4027.1s 1598 Current Train Loss: 1.3600
+4029.5s 1599 Current Train Loss: 1.3763
+4031.9s 1600 Current Train Loss: 1.3410
+4034.3s 1601 Current Train Loss: 1.3203
+4036.7s 1602 Current Train Loss: 1.3741
+4038.9s 1603 Current Train Loss: 1.2773
+4041.1s 1604 Current Train Loss: 1.3478
+4043.5s 1605 Current Train Loss: 1.2954
+4045.8s 1606 Current Train Loss: 1.2714
+4048.3s 1607 Current Train Loss: 1.3433
+4050.6s 1608 Current Train Loss: 1.3312
+4052.9s 1609 Current Train Loss: 1.3624
+4055.3s 1610 Current Train Loss: 1.3840
+4057.5s 1611 Current Train Loss: 1.3828
+4059.8s 1612 Current Train Loss: 1.2743
+4062.0s 1613 Current Train Loss: 1.4132
+4064.3s 1614 Current Train Loss: 1.2572
+4066.6s 1615 Current Train Loss: 1.3987
+4068.8s 1616 Current Train Loss: 1.2810
+4071.1s 1617 Current Train Loss: 1.2285
+4073.4s 1618 Current Train Loss: 1.3470
+4075.8s 1619 Current Train Loss: 1.3694
+4078.1s 1620 Current Train Loss: 1.4054
+4080.7s 1621 Current Train Loss: 1.3533
+4082.9s 1622 Current Train Loss: 1.4373
+4085.3s 1623 Current Train Loss: 1.2985
+4087.5s 1624 Current Train Loss: 1.3434
+4089.7s 1625 Current Train Loss: 1.3285
+4092.1s 1626 Current Train Loss: 1.3533
+4094.4s 1627 Current Train Loss: 1.3871
+4096.8s 1628 Current Train Loss: 1.5003
+4099.1s 1629 Current Train Loss: 1.3482
+4101.5s 1630 Current Train Loss: 1.3283
+4103.7s 1631 Current Train Loss: 1.4253
+4105.9s 1632 Current Train Loss: 1.2994
+4108.2s 1633 Current Train Loss: 1.4485
+4110.5s 1634 Current Train Loss: 1.2612
+4113.1s 1635 Current Train Loss: 1.4084
+4115.4s 1636 Current Train Loss: 1.3597
+4117.5s 1637 Current Train Loss: 1.2381
+4119.8s 1638 Current Train Loss: 1.3943
+4122.0s 1639 Current Train Loss: 1.3670
+4124.2s 1640 Current Train Loss: 1.3954
+4126.4s 1641 Current Train Loss: 1.2770
+4128.0s 1642 Current Train Loss: 1.3552
+4128.0s 1643 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4128.0s 1644 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4128.0s 1645 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4128.0s 1646 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4175.7s 1647 Epoch [19/20] Train Loss: 1.3520 Val Loss: 1.3395 Val Acc: 53.78%
+4175.7s 1648 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4175.7s 1649 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4175.7s 1650 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4175.7s 1651 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4180.0s 1652 Current Train Loss: 1.2199
+4182.4s 1653 Current Train Loss: 1.3762
+4184.6s 1654 Current Train Loss: 1.2810
+4186.9s 1655 Current Train Loss: 1.3858
+4189.1s 1656 Current Train Loss: 1.3707
+4191.4s 1657 Current Train Loss: 1.2734
+4193.7s 1658 Current Train Loss: 1.3374
+4196.0s 1659 Current Train Loss: 1.3252
+4198.2s 1660 Current Train Loss: 1.3637
+4200.4s 1661 Current Train Loss: 1.3374
+4202.6s 1662 Current Train Loss: 1.4566
+4204.9s 1663 Current Train Loss: 1.3822
+4207.3s 1664 Current Train Loss: 1.3347
+4209.4s 1665 Current Train Loss: 1.3816
+4211.6s 1666 Current Train Loss: 1.4109
+4213.8s 1667 Current Train Loss: 1.3376
+4215.9s 1668 Current Train Loss: 1.3935
+4218.0s 1669 Current Train Loss: 1.3500
+4220.2s 1670 Current Train Loss: 1.2527
+4222.4s 1671 Current Train Loss: 1.2858
+4224.7s 1672 Current Train Loss: 1.3233
+4226.8s 1673 Current Train Loss: 1.4284
+4229.0s 1674 Current Train Loss: 1.3278
+4231.0s 1675 Current Train Loss: 1.2861
+4233.4s 1676 Current Train Loss: 1.3106
+4235.5s 1677 Current Train Loss: 1.3689
+4238.4s 1678 Current Train Loss: 1.2635
+4240.5s 1679 Current Train Loss: 1.2953
+4242.7s 1680 Current Train Loss: 1.2745
+4245.0s 1681 Current Train Loss: 1.4295
+4247.2s 1682 Current Train Loss: 1.3316
+4249.4s 1683 Current Train Loss: 1.3192
+4251.8s 1684 Current Train Loss: 1.5506
+4254.0s 1685 Current Train Loss: 1.2845
+4256.2s 1686 Current Train Loss: 1.3718
+4258.5s 1687 Current Train Loss: 1.3971
+4260.7s 1688 Current Train Loss: 1.4201
+4262.9s 1689 Current Train Loss: 1.4394
+4265.0s 1690 Current Train Loss: 1.3701
+4267.2s 1691 Current Train Loss: 1.3012
+4270.2s 1692 Current Train Loss: 1.3604
+4272.4s 1693 Current Train Loss: 1.3963
+4274.5s 1694 Current Train Loss: 1.3112
+4276.6s 1695 Current Train Loss: 1.3519
+4278.8s 1696 Current Train Loss: 1.2832
+4280.9s 1697 Current Train Loss: 1.3067
+4283.2s 1698 Current Train Loss: 1.4336
+4285.5s 1699 Current Train Loss: 1.2796
+4287.8s 1700 Current Train Loss: 1.3400
+4289.9s 1701 Current Train Loss: 1.3709
+4292.1s 1702 Current Train Loss: 1.3707
+4294.3s 1703 Current Train Loss: 1.3763
+4296.6s 1704 Current Train Loss: 1.2916
+4298.8s 1705 Current Train Loss: 1.3555
+4301.3s 1706 Current Train Loss: 1.3284
+4303.3s 1707 Current Train Loss: 1.3857
+4305.5s 1708 Current Train Loss: 1.2784
+4307.7s 1709 Current Train Loss: 1.3379
+4309.9s 1710 Current Train Loss: 1.3468
+4312.3s 1711 Current Train Loss: 1.2803
+4314.6s 1712 Current Train Loss: 1.2949
+4316.8s 1713 Current Train Loss: 1.2830
+4318.9s 1714 Current Train Loss: 1.3770
+4321.1s 1715 Current Train Loss: 1.3522
+4323.2s 1716 Current Train Loss: 1.4003
+4325.3s 1717 Current Train Loss: 1.3125
+4327.5s 1718 Current Train Loss: 1.3695
+4329.6s 1719 Current Train Loss: 1.3494
+4332.1s 1720 Current Train Loss: 1.3478
+4334.3s 1721 Current Train Loss: 1.3294
+4336.4s 1722 Current Train Loss: 1.4439
+4338.5s 1723 Current Train Loss: 1.3159
+4340.5s 1724 Current Train Loss: 1.4363
+4342.1s 1725 Current Train Loss: 1.3297
+4342.1s 1726 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4342.1s 1727 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4342.1s 1728 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4342.1s 1729 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4389.5s 1730 Epoch [20/20] Train Loss: 1.3470 Val Loss: 1.3357 Val Acc: 53.54%
+4389.5s 1731 Checkpoint saved at epoch 20 to /kaggle/working/linear_classifier_epoch_20.pth
+4390.0s 1732 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4390.0s 1733 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4390.0s 1734 /usr/local/lib/python3.11/dist-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+4390.0s 1735 dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+4394.9s 1736 Batch started (11 in total)
+4398.0s 1737 Batch started (11 in total)
+4400.4s 1738 Batch started (11 in total)
+4403.0s 1739 Batch started (11 in total)
+4405.5s 1740 Batch started (11 in total)
+4407.9s 1741 Batch started (11 in total)
+4410.2s 1742 Batch started (11 in total)
+4412.7s 1743 Batch started (11 in total)
+4414.9s 1744 Batch started (11 in total)
+4417.1s 1745 Batch started (11 in total)
+4419.3s 1746 Batch started (11 in total)
+4420.3s 1747 Test Acc: 51.78%
+4425.4s 1748 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+4425.4s 1749 warn(
+4425.5s 1750 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+4425.9s 1751 [NbConvertApp] Writing 159609 bytes to __notebook__.ipynb
+4427.3s 1752 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+4427.3s 1753 warn(
+4427.3s 1754 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+4428.2s 1755 [NbConvertApp] Writing 550059 bytes to __results__.html
